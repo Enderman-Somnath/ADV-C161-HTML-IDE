@@ -8,7 +8,7 @@ root = Tk()
 
 #Configuring Window
 root.geometry("1280x768")
-root.title("Notepad")
+root.title("HTML IDE")
 root.configure(background="yellow")
 
 exit1 = ImageTk.PhotoImage(Image.open("exit.png"))
@@ -31,7 +31,7 @@ def opentxt():
     my_text.delete(1.0,END)
     input_file_name.delete(0,END)
     text_file = filedialog.askopenfilename(title="Open Text File",
-                                           filetypes=(("Text Files","*.txt"),))
+                                           filetypes=(("Text Files","*.html"),))
     print(text_file)
     name = os.path.basename(text_file)
     formatted_name = name.split('.')[0]
